@@ -32,6 +32,12 @@ public class ShoppingTest extends TestBase {
         cart = new Cart(driver);
         cart.clickOncartButton();
         cart.proceedToCheckout();
+        cart.deleteItem();
+        cart.verifyItemIsRemovedFromCart();
+        cart.searchItem("T shirt") ;
+        cart.searchButton();
+        cart.scrolltoBottomOfThePage();
+        cart.validateStoreInformation();
 
         Thread.sleep(5000L);
     }
